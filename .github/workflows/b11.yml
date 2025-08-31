@@ -64,7 +64,7 @@ jobs:
       - name: Update deployment.yaml with new ECR image
         run: |
           FILE=deployment.yml
-          NEW_IMAGE=371952811305.dkr.ecr.ap-south-1.amazonaws.com/b12:${{ github.sha }}
+          NEW_IMAGE=521744733303.dkr.ecr.ap-south-1.amazonaws.com/b12:${{ github.sha }}
           echo "Updating image to $NEW_IMAGE in $FILE"
           sed -i "s|image: .*|image: $NEW_IMAGE|" "$FILE"
           echo "Updated content:"
